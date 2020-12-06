@@ -5,7 +5,12 @@ const path = require("path");
 const bodyParser = require("body-parser");
 
 //Global Variables
-var userid_g;
+global.userid_g="";
+
+function foo(){
+    const size = document.querySelector("#size").value;
+    return size;
+}
 
 //Initializing express and body-parser
 var app = express();
@@ -146,10 +151,14 @@ app.post("/login/request", function(req, res){
             }
             else{
                 if(result[0].pass == password){
+                    var input = {userid_g: username};
+                    dbo.collection("login").insertOne(input);
                     db.close();
-                    userid_g = username;
+                    //userid_g= username;
+                    
                     //res.sendFile(path.join(__dirname,"/html_pages/index.html"));
                     res.status(200).send("Successful Connection.");
+                    return userid_g;
                 }
                 else{
                     db.close();
@@ -158,19 +167,76 @@ app.post("/login/request", function(req, res){
                 }
             }
         });
+        console.log(userid_g);
     });
 });
 
 //Cart 
+app.post("/buying", function(req, res){
+    const cloth = req.body.cloth;
+    const price = req.body.price;
+    //foo();
+    const size = req.body.size;
+    const quant = req.body.quantity;
+    //console.log(quant);
+
+    MongoClient.connect(url, function(err, db){
+        if(err)
+            throw err;
+        var dbo = db.db(dbname);
+
+        dbo.collection("login").find({}, {projection: {_id: 0, userid_g: 1}}).toArray(function(error, result){
+            if(error)
+                throw error;
+            //console.log(result);
+            if(result.length == 0){
+                //alert("Please Login First.");
+                //res.sendFile(path.join(__dirname, "/login.html"));
+                console.log("Hello");
+                res.status(401).send("Not a user");
+                //dbo.close();
+                //call function to do query selector job
+            }
+            else{
+                dbo.collection("insert")
+            }
+
+        });
+    });
+});
+
+/*
 function add_to_cart(){
     const cloth = document.querySelector("#cloth").innerText;
     const price = document.querySelector("#price").innerText;
     const size = document.querySelector("#size").value;
     const quant = document.querySelector("#quantity").value;
-
     
+    MongoClient.connect(url, function(err, db){
+        if(err)
+            throw err;
+        var dbo = db.db(dbname);
+        console.log("Hello");
+        
+        dbo.collection("login").find({}, {projection: {_id: 0, user_name: 1}}).toArray(function(error, result){
+            if(error)
+                throw error;
+            console.log(result);
+            if(result.length == 0){
+                //alert("Please Login First.");
+                //res.sendFile(path.join(__dirname, "/login.html"));
+                dbo.close();
+                //call function to do query selector job
+            }
+            else{
+                
+            }
+
+        });
+    });
 
 }
+*/
 
 
 //Listening on PORT 3000
