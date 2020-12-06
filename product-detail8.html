@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - Surfers Store</title>
+    <link rel="stylesheet" href="./style.css" type="text/css"/>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="images/logo-white.png" width="250" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="">Your Order</a></li>
+            <!-- <li><a href="">Account</a></li> -->
+            <li>
+              <div class="dropdown">
+                <div class="dropbtn">Account</div>
+                <div class="dropdown-content">
+                  <a href="signup.html">Sign Up</a>
+                  <a href="login.html">Log In</a>
+                  
+                </div>
+              </div>
+            </li>
+          </ul>
+          <img src="images/cart.png" width="30px" height="30px" />
+        </nav>
+      </div>
+    </div>
+<!-- ----------------------------------------------------------Product Detail---------------------------------------->
+    <div class="small-container single-product"  >
+        <div class="row">
+            <div class="col-2">
+                <img src="images/product-11.jpg" width="100%" id="productimg">
+                <div class="small-image-row">
+                    <div class="small-image-col">
+                        <img src="images/causel-1.png" class="small-img">
+                    </div>
+                    <div class="small-image-col">
+                        <img src="images/causel-2.png" class="small-img">
+                    </div>
+                    <div class="small-image-col">
+                        <img src="images/causel-3.png" class="small-img">
+                    </div>
+                    <div class="small-image-col">
+                        <img src="images/causel-4.png" class="small-img">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-2">
+                <p >Home | T-Shirt</p>
+                <form onsubmit="add_to_cart()">
+                <h1 id="cloth" name="cloths">Red Printed T-Shirt By HRX</h1>
+                <h4 id="price">$50.00</h4>
+                <select name="size" id="size">
+                    <option value="Select Size">Select Size</option>
+                    <option value="XL">XL</option>
+                    <option value="Large">Large</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Small">Small</option>
+                </select>
+                <input type="number" type="1" id="quantity">
+                <button type="submit"><a class="btn">Add To Cart</a></button>
+                </form>
+                <h3>Product Detail <i class="fa fa-indent"></i></h3>
+                <br>
+                <p>csdfvdfbrhjjhnbregvrhrhgbsdvfb rhtyjtyjhrghtyjtuhrth tyhtyjujfvederhgrh</p>
+            </div>
+        </div>
+    </div>
+<!-- ------------------------------title-------------------------------------- -->
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
+    </div>
+
+
+<!-- ----------------------------------Product---------------------------------------- -->
+
+    <div class="small-container">
+     <div class="row">
+        <div class="col-4">
+            <img src="images/product-9.jpg" />
+            <h4>Sport Watch</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>$50.00</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-10.jpg" />
+            <h4>Sport Shoes</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>$75.00</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-11.jpg" />
+            <h4>Causel Shoes</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-o"></i>
+              <i class="fa fa-star-o"></i>
+            </div>
+            <p>$38.00</p>
+          </div>
+          <div class="col-4">
+            <img src="images/product-12.jpg" />
+            <h4>Nike Trouser</h4>
+            <div class="rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half-o"></i>
+            </div>
+            <p>$75.00</p>
+          </div>
+        </div>
+      </div>
+       
+      
+    </div>
+    <!----------------------------------------------------------------------------footer------------------------------------------------------------------------------>
+    <div class="footer">
+      <hr />
+      <p class="copyright">Copyright WebTech Project <br />Made in A304</p>
+    </div>
+
+
+
+<!-- -----------------------------------JS FOR Product Gallery--------------------------------------------------------------- -->
+
+    <script>
+        var productimg=document.getElementById("productimg")
+        var smallimg=document.getElementsByClassName("small-img")
+
+        smallimg[0].onclick = function()
+        {
+            productimg.src = smallimg[0].src;
+        }
+        smallimg[1].onclick = function()
+        {
+            productimg.src = smallimg[1].src;
+        }
+        smallimg[2].onclick = function()
+        {
+            productimg.src = smallimg[2].src;
+        }
+        smallimg[3].onclick = function()
+        {
+            productimg.src = smallimg[3].src;
+        }
+    </script>
+
+    <script src="index.js"></script>
+  </body>
+</html>
