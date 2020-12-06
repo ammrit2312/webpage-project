@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Surfers Store</title>
-    <link rel="stylesheet" href="/style.css" type="text/css"/>
+    <link rel="stylesheet" href="/style.css" type="text/css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    
+    <link rel="stylesheet" href="./style.css" type="text/css" />
   </head>
   <body>
     <div class="header">
@@ -20,12 +20,21 @@
           </div>
           <nav>
             <ul>
-              <li><a href="">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="product.html">Product</a></li>
               <li><a href="">Your Order</a></li>
-              <li><a href="">Account</a></li>
+              <!-- <li><a href="">Account</a></li> -->
+              <li>
+                <div class="dropdown">
+                  <div class="dropbtn">Account</div>
+                  <div class="dropdown-content">
+                    <a href="signup.html">Sign Up</a>
+                    <a href="login.html">Log In</a>
+                  </div>
+                </div>
+              </li>
             </ul>
-            <img src="images/cart.png" width="30px" height="30px" onclick="cart()"/>
+            <img src="images/cart.png" width="30px" height="30px" />
           </nav>
         </div>
         <div class="row">
@@ -45,9 +54,7 @@
       <div class="small-container">
         <div class="row">
           <div class="col-3">
-            <a href="product-detail.html"
-              ><img src="images/category-1.jpg"
-            /></a>
+            <a href=""><img src="images/category-1.jpg" /></a>
           </div>
           <div class="col-3">
             <img src="images/category-2.jpg" />
@@ -68,7 +75,7 @@
           <form action="/product-detail" method="GET">
             <input type="image" src="images/product-1.jpg" name="submit" />
           </form>
-          
+
           <h4>Red Printed T-Shirt</h4>
           <div class="rating">
             <i class="fa fa-star"></i>
@@ -311,19 +318,19 @@
       <div class="samll-container">
         <div class="row">
           <div class="col-5">
-            <img src="images/nike.eps" />
+            <img src="images/nike-1.png" />
           </div>
           <div class="col-5">
             <img src="images/underarmour.png" />
           </div>
           <div class="col-5">
-            <img src="images/adidas.eps" />
+            <img src="images/adidas.png" />
           </div>
           <div class="col-5">
-            <img src="images/puma.eps" />
+            <img src="images/puma.png" />
           </div>
           <div class="col-5">
-            <img src="images/reebok.eps" />
+            <img src="images/reebok.png" />
           </div>
         </div>
       </div>
@@ -332,6 +339,5 @@
       <hr />
       <p class="copyright">Copyright WebTech Project <br />Made in A304</p>
     </div>
-    <script src="index.js"></script>
   </body>
 </html>

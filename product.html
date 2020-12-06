@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products - Surfers Store</title>
-    <link rel="stylesheet" href="/style.css" type="text/css"/>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
   </head>
   <body>
     <div class="container">
@@ -18,10 +19,19 @@
         </div>
         <nav>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Product</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
             <li><a href="">Your Order</a></li>
-            <li><a href="">Account</a></li>
+            <!-- <li><a href="">Account</a></li> -->
+            <li>
+              <div class="dropdown">
+                <div class="dropbtn">Account</div>
+                <div class="dropdown-content">
+                  <a href="signup.html">Sign Up</a>
+                  <a href="login.html">Log In</a>
+                </div>
+              </div>
+            </li>
           </ul>
           <img src="images/cart.png" width="30px" height="30px" />
         </nav>
