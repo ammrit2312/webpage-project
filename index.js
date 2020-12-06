@@ -7,11 +7,6 @@ const bodyParser = require("body-parser");
 //Global Variables
 var userid_g;
 
-function cart(){
-    
-}
-
-
 //Initializing express and body-parser
 var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
@@ -53,6 +48,15 @@ app.get("/product", function(req, res){
 app.get("/orders", function(req, res){
     console.log("Orders Page initiated.");
     res.sendFile(path.join(__dirname, "/orders.html"));
+});
+
+app.get("/product_new", function(req, res){
+    console.log("Product Details started.");
+    
+
+
+
+
 });
 
 //Sign Up process
@@ -158,7 +162,15 @@ app.post("/login/request", function(req, res){
 });
 
 //Cart 
+function add_to_cart(){
+    const cloth = document.querySelector("#cloth").innerText;
+    const price = document.querySelector("#price").innerText;
+    const size = document.querySelector("#size").value;
+    const quant = document.querySelector("#quantity").value;
 
+    
+
+}
 
 
 //Listening on PORT 3000
