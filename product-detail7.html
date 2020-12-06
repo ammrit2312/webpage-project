@@ -21,7 +21,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="product.html">Product</a></li>
-            <li><a href="">Your Order</a></li>
+         
             <!-- <li><a href="">Account</a></li> -->
             <li>
               <div class="dropdown">
@@ -34,7 +34,9 @@
               </div>
             </li>
           </ul>
-          <img src="images/cart.png" width="30px" height="30px" />
+          <form action="/cart_final" method="GET">
+            <input type="image" src="images/cart.png" name="cart" width="30px" height="30px"/>
+          </form>
         </nav>
       </div>
     </div>
@@ -60,10 +62,10 @@
 
             </div>
             <div class="col-2">
-                <p >Home | T-Shirt</p>
-                <form onsubmit="add_to_cart()">
-                <h1 id="cloth" name="cloths">Red Printed T-Shirt By HRX</h1>
-                <h4 id="price">$50.00</h4>
+                <p >Home</p>
+                <form action="/buying/red_printed" method="POST"></form>
+                <h1 id="cloth" name="cloths">Sport Shoes</h1>
+                <h4 id="price">$75.00</h4>
                 <select name="size" id="size">
                     <option value="Select Size">Select Size</option>
                     <option value="XL">XL</option>
@@ -72,11 +74,14 @@
                     <option value="Small">Small</option>
                 </select>
                 <input type="number" type="1" id="quantity">
-                <button type="submit"><a class="btn">Add To Cart</a></button>
+                <button type="submit" class="btn">Add To Cart</button>
+                <div class="human-verify"><br>
+                  <h5>Insert your Username and the Product Name (To verify you are a Human)</h5>  
+                  <br>
+                    <input type="text" placeholder="Username/Product Name" id="txtbox">
+                </div>  
                 </form>
-                <h3>Product Detail <i class="fa fa-indent"></i></h3>
-                <br>
-                <p>csdfvdfbrhjjhnbregvrhrhgbsdvfb rhtyjtyjhrghtyjtuhrth tyhtyjujfvederhgrh</p>
+                
             </div>
         </div>
     </div>

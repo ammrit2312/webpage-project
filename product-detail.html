@@ -34,7 +34,9 @@
               </div>
             </li>
           </ul>
-          <img src="images/cart.png" width="30px" height="30px" />
+          <form action="/cart_final" method="GET">
+            <input type="image" src="images/cart.png" name="cart" width="30px" height="30px"/>
+          </form>
         </nav>
       </div>
     </div>
@@ -72,11 +74,13 @@
                     <option value="Small">Small</option>
                 </select>
                 <input type="number" type="1" id="quantity" name="quantity">
-                <button type="submit"><a class="btn">Add To Cart</a></button>
+                <button type="submit" class="btn">Add To Cart</button>
+                <div class="human-verify"><br>
+                  <h5>Insert your Username and the Product Name (To verify you are a Human)</h5>  
+                  <br>
+                    <input type="text" placeholder="Username/Product Name" id="txtbox">
+                </div>  
                 </form>
-                <h3>Product Detail <i class="fa fa-indent"></i></h3>
-                <br>
-                <p>csdfvdfbrhjjhnbregvrhrhgbsdvfb rhtyjtyjhrghtyjtuhrth tyhtyjujfvederhgrh</p>
             </div>
         </div>
     </div>
