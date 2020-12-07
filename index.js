@@ -248,7 +248,11 @@ app.post("/buying/red_printed", function(req, res){
                 throw error_1;
             console.log(result_1);
             if(result_1.length == 0){
-                res.send("Login First");
+                res.writeHead(200, {"Content-Type": "text/html"});
+                    res.write("<h1>Login First.</h1>")
+                    res.write("Link to <a href='/login.html'>Login Page</a>")
+                    res.end();
+                    db.close();
             }
             final.push(parseInt(result_1[0].total));
             console.log(final);
