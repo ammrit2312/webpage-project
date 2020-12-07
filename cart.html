@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <title>Products - Surfers Store</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <img src="images/logo-white.png" width="250" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="product.html">Product</a></li>
+
+            <!-- <li><a href="">Account</a></li> -->
+            <li>
+              <div class="dropdown">
+                <div class="dropbtn">Account</div>
+                <div class="dropdown-content">
+                  <a href="signup.html">Sign Up</a>
+                  <a href="login.html">Log In</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <form action="/cart_final" method="GET">
+            <input
+              type="image"
+              src="images/cart.png"
+              name="cart"
+              width="30px"
+              height="30px"
+            />
+          </form>
+        </nav>
+      </div>
+    </div>
+    <div class="cart_final">
+      <form action="/cart_main" method="POST">
+        <label>Username (to verify if you are a human)</label><br /><br />
+        <input
+          type="text"
+          name="username"
+          placeholder="Username"
+          size="40px"
+          height="180px"
+        />
+        <br />
+        <br />
+        <button type="submit" style="height: 20px; width: 150px">
+          See My Cart
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

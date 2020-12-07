@@ -684,3 +684,10 @@ h4 {
   border: none;
   cursor: pointer;
   margin: 10px 0;
+}
+
+  .cart_final {
+    text-align: center;
+    margin-left: 70px;
+    margin-inline-start: 50px;
+  }
